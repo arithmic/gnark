@@ -30,7 +30,7 @@ import (
 
 	"github.com/consensys/gnark/constraint/tinyfield"
 
-	fr "github.com/consensys/gnark/internal/tinyfield"
+	fr "github.com/consensys/gnark/internal/smallfields/tinyfield"
 )
 
 func TestSerialization(t *testing.T) {
