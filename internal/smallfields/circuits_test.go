@@ -5,6 +5,7 @@ import (
 
 	"github.com/consensys/gnark-crypto/field/goldilocks"
 	"github.com/consensys/gnark/frontend"
+	"github.com/consensys/gnark/internal/smallfields/babybear"
 	"github.com/consensys/gnark/std/math/emulated"
 	"github.com/consensys/gnark/std/math/emulated/emparams"
 	"github.com/consensys/gnark/test"
@@ -48,11 +49,11 @@ type smallBN struct {
 }
 
 func (smallBN) BitsPerLimb() uint {
-	return 16
+	return 11
 }
 
 func (smallBN) NbLimbs() uint {
-	return 16
+	return 24
 }
 
 func TestEmulatedCircuit(t *testing.T) {
@@ -62,5 +63,11 @@ func TestEmulatedCircuit(t *testing.T) {
 	assert.Error(err)
 
 	err = test.IsSolved(&EmulatedCircuit[smallBN]{}, &EmulatedCircuit[smallBN]{A: emulated.ValueOf[smallBN](2), B: emulated.ValueOf[smallBN](4)}, goldilocks.Modulus())
+	assert.NoError(err)
+
+	err = test.IsSolved(&EmulatedCircuit[emparams.BN254Fp]{}, &EmulatedCircuit[emparams.BN254Fp]{A: emulated.ValueOf[emparams.BN254Fp](2), B: emulated.ValueOf[emparams.BN254Fp](4)}, babybear.Modulus())
+	assert.Error(err)
+
+	err = test.IsSolved(&EmulatedCircuit[smallBN]{}, &EmulatedCircuit[smallBN]{A: emulated.ValueOf[smallBN](2), B: emulated.ValueOf[smallBN](4)}, babybear.Modulus())
 	assert.NoError(err)
 }
