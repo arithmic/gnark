@@ -31,7 +31,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/consensys/gnark-crypto/ecc/babybear/fr"
+	fr "github.com/consensys/gnark/internal/smallfields/babybear"
 )
 
 // solver represent the state of the solver during a call to System.Solve(...)

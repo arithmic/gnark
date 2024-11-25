@@ -28,7 +28,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"github.com/consensys/gnark/constraint/tinyfield"
+	cs "github.com/consensys/gnark/constraint/tinyfield"
 
 	fr "github.com/consensys/gnark/internal/smallfields/tinyfield"
 )

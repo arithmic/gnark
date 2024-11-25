@@ -30,7 +30,7 @@ import (
 
 	cs "github.com/consensys/gnark/constraint/babybear"
 
-	"github.com/consensys/gnark-crypto/ecc/babybear/fr"
+	fr "github.com/consensys/gnark/internal/smallfields/babybear"
 )
 
 func TestSerialization(t *testing.T) {
