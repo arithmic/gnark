@@ -68,7 +68,7 @@ func main() {
 		CurveID:           "UNKNOWN",
 		noBackend:         true,
 		NoGKR:             true,
-		autoGenerateField: "0x2f",
+		AutoGenerateField: "0x2f",
 	}
 	baby_bear_field := templateData{
 		RootPath:          "../../../internal/smallfields/babybear/",
@@ -77,7 +77,7 @@ func main() {
 		CurveID:           "UNKNOWN",
 		noBackend:         true,
 		NoGKR:             true,
-		autoGenerateField: "0x78000001",
+		AutoGenerateField: "0x78000001",
 	}
 
 	datas := []templateData{
@@ -103,8 +103,8 @@ func main() {
 		go func(d templateData) {
 			defer wg.Done()
 			// auto-generate small fields
-			if d.autoGenerateField != "" {
-				conf, err := config.NewFieldConfig(d.Curve, "Element", d.autoGenerateField, false)
+			if d.AutoGenerateField != "" {
+				conf, err := config.NewFieldConfig(d.Curve, "Element", d.AutoGenerateField, false)
 				if err != nil {
 					panic(err)
 				}
@@ -235,7 +235,7 @@ type templateData struct {
 	Curve    string
 	CurveID  string
 
-	autoGenerateField string
+	AutoGenerateField string
 	noBackend         bool
 	NoGKR             bool
 }
