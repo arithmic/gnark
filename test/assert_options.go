@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/backend/solidity"
-	"github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/frontend"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/backend/solidity"
+	"github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/frontend"
 )
 
 // TestingOption defines option for altering the behavior of Assert methods.

@@ -1,7 +1,7 @@
 package expr
 
 import (
-	"github.com/consensys/gnark/constraint"
+	"github.com/arithmic/gnark/constraint"
 	"golang.org/x/crypto/blake2b"
 )
 

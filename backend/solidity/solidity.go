@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"hash"
 
-	"github.com/consensys/gnark/backend"
+	"github.com/arithmic/gnark/backend"
 	"golang.org/x/crypto/sha3"
 )
 

@@ -9,9 +9,9 @@ import (
 
 	"github.com/consensys/gnark"
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/schema"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/schema"
 )
 
 var seedCorpus []*big.Int

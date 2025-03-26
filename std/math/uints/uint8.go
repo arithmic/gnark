@@ -26,10 +26,10 @@ import (
 	"fmt"
 	"math/bits"
 
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/internal/logderivprecomp"
-	"github.com/consensys/gnark/std/math/bitslice"
-	"github.com/consensys/gnark/std/rangecheck"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/internal/logderivprecomp"
+	"github.com/arithmic/gnark/std/math/bitslice"
+	"github.com/arithmic/gnark/std/rangecheck"
 )
 
 // TODO: if internal then enforce range check!

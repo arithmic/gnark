@@ -6,9 +6,9 @@ import (
 	"fmt"
 
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/cs/r1cs"
-	"github.com/consensys/gnark/profile"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/r1cs"
+	"github.com/arithmic/gnark/profile"
 )
 
 type Circuit struct {

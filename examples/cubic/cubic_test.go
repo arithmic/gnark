@@ -6,7 +6,7 @@ package cubic
 import (
 	"testing"
 
-	"github.com/consensys/gnark/test"
+	"github.com/arithmic/gnark/test"
 )
 
 func TestCubicEquation(t *testing.T) {

@@ -2,11 +2,11 @@ package internal
 
 import (
 	"errors"
-	hint "github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/compress"
-	"github.com/consensys/gnark/std/compress/internal/plonk"
-	"github.com/consensys/gnark/std/lookup/logderivlookup"
+	hint "github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/compress"
+	"github.com/arithmic/gnark/std/compress/internal/plonk"
+	"github.com/arithmic/gnark/std/lookup/logderivlookup"
 	"math/big"
 )
 

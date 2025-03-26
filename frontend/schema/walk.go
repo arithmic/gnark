@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/consensys/gnark/frontend/schema/internal/reflectwalk"
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/frontend/schema/internal/reflectwalk"
+	"github.com/arithmic/gnark/logger"
 )
 
 // Walk walks through the provided object and stops when it encounters objects of type tLeaf

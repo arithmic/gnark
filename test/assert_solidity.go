@@ -8,9 +8,9 @@ import (
 	"strconv"
 
 	fr_bn254 "github.com/consensys/gnark-crypto/ecc/bn254/fr"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/backend/solidity"
-	"github.com/consensys/gnark/backend/witness"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/backend/solidity"
+	"github.com/arithmic/gnark/backend/witness"
 )
 
 // solidityVerification checks that the exported solidity contract can verify the proof

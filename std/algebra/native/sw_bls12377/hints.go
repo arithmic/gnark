@@ -7,7 +7,7 @@ import (
 	"github.com/consensys/gnark-crypto/ecc"
 	bls12377 "github.com/consensys/gnark-crypto/ecc/bls12-377"
 	"github.com/consensys/gnark-crypto/field/eisenstein"
-	"github.com/consensys/gnark/constraint/solver"
+	"github.com/arithmic/gnark/constraint/solver"
 )
 
 func GetHints() []solver.Hint {

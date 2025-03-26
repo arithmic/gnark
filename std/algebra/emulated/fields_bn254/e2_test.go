@@ -6,9 +6,9 @@ import (
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark-crypto/ecc/bn254"
 	"github.com/consensys/gnark-crypto/ecc/bn254/fp"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/math/emulated"
-	"github.com/consensys/gnark/test"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/math/emulated"
+	"github.com/arithmic/gnark/test"
 )
 
 type e2Add struct {

@@ -16,10 +16,10 @@ import (
 	"github.com/consensys/gnark-crypto/ecc/bw6-633/fr"
 	"github.com/consensys/gnark-crypto/ecc/bw6-633/fr/hash_to_field"
 	"github.com/consensys/gnark-crypto/ecc/bw6-633/fr/pedersen"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/backend/solidity"
-	"github.com/consensys/gnark/constraint"
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/backend/solidity"
+	"github.com/arithmic/gnark/constraint"
+	"github.com/arithmic/gnark/logger"
 )
 
 var (

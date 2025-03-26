@@ -6,10 +6,10 @@ import (
 	"math/big"
 
 	"github.com/consensys/gnark-crypto/ecc/secp256k1/ecdsa"
-	"github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/frontend"
-	limbs "github.com/consensys/gnark/std/internal/limbcomposition"
-	"github.com/consensys/gnark/std/math/emulated"
+	"github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/frontend"
+	limbs "github.com/arithmic/gnark/std/internal/limbcomposition"
+	"github.com/arithmic/gnark/std/math/emulated"
 )
 
 func init() {

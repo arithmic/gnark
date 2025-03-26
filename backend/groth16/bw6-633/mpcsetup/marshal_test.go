@@ -9,10 +9,10 @@ import (
 	"testing"
 
 	curve "github.com/consensys/gnark-crypto/ecc/bw6-633"
-	cs "github.com/consensys/gnark/constraint/bw6-633"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/cs/r1cs"
-	gnarkio "github.com/consensys/gnark/io"
+	cs "github.com/arithmic/gnark/constraint/bw6-633"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/r1cs"
+	gnarkio "github.com/arithmic/gnark/io"
 	"github.com/stretchr/testify/require"
 )
 

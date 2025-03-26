@@ -3,7 +3,7 @@
 
 package twistededwards
 
-import "github.com/consensys/gnark/frontend"
+import "github.com/arithmic/gnark/frontend"
 
 // neg computes the negative of a point in SNARK coordinates
 func (p *Point) neg(api frontend.API, p1 *Point) *Point {

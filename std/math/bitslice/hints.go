@@ -4,7 +4,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/consensys/gnark/constraint/solver"
+	"github.com/arithmic/gnark/constraint/solver"
 )
 
 func init() {

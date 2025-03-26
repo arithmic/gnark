@@ -5,8 +5,8 @@ import (
 
 	bls12381 "github.com/consensys/gnark-crypto/ecc/bls12-381"
 	"github.com/consensys/gnark-crypto/ecc/bls12-381/fp"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/math/emulated"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/math/emulated"
 )
 
 type E12 struct {

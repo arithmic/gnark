@@ -9,10 +9,10 @@ import (
 	"io"
 	"time"
 
-	"github.com/consensys/gnark/backend/witness"
-	"github.com/consensys/gnark/constraint"
-	csolver "github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/backend/witness"
+	"github.com/arithmic/gnark/constraint"
+	csolver "github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/logger"
 
 	"github.com/consensys/gnark-crypto/ecc"
 

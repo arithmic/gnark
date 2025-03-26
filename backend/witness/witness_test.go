@@ -9,9 +9,9 @@ import (
 
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark-crypto/ecc/bn254/fr"
-	"github.com/consensys/gnark/backend/witness"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/io"
+	"github.com/arithmic/gnark/backend/witness"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/io"
 	"github.com/stretchr/testify/require"
 )
 

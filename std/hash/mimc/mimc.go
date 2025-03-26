@@ -8,8 +8,8 @@ import (
 	"math/big"
 
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/internal/utils"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/internal/utils"
 )
 
 // MiMC contains the params of the MiMC hash func and the curves on which it is implemented.

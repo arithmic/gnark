@@ -43,10 +43,10 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/hash/mimc"
-	"github.com/consensys/gnark/std/multicommit"
+	"github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/hash/mimc"
+	"github.com/arithmic/gnark/std/multicommit"
 )
 
 func init() {

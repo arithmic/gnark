@@ -8,11 +8,11 @@ import (
 
 	"github.com/consensys/gnark-crypto/ecc"
 	cryptomimc "github.com/consensys/gnark-crypto/hash"
-	"github.com/consensys/gnark/frontend"
-	fiatshamir "github.com/consensys/gnark/std/fiat-shamir"
-	stdhash "github.com/consensys/gnark/std/hash"
-	"github.com/consensys/gnark/std/hash/mimc"
-	"github.com/consensys/gnark/std/math/bits"
+	"github.com/arithmic/gnark/frontend"
+	fiatshamir "github.com/arithmic/gnark/std/fiat-shamir"
+	stdhash "github.com/arithmic/gnark/std/hash"
+	"github.com/arithmic/gnark/std/hash/mimc"
+	"github.com/arithmic/gnark/std/math/bits"
 	"golang.org/x/exp/slices"
 )
 

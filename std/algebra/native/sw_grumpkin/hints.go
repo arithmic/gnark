@@ -5,10 +5,10 @@ import (
 	"math/big"
 
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/math/emulated"
-	"github.com/consensys/gnark/std/math/emulated/emparams"
+	"github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/math/emulated"
+	"github.com/arithmic/gnark/std/math/emulated/emparams"
 )
 
 func GetHints() []solver.Hint {

@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/consensys/gnark/constraint"
-	"github.com/consensys/gnark/debug"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/internal/expr"
-	"github.com/consensys/gnark/std/math/bits"
+	"github.com/arithmic/gnark/constraint"
+	"github.com/arithmic/gnark/debug"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/internal/expr"
+	"github.com/arithmic/gnark/std/math/bits"
 )
 
 // AssertIsEqual fails if i1 != i2

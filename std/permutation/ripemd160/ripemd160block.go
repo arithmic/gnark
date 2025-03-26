@@ -2,7 +2,7 @@
 package ripemd160
 
 import (
-	"github.com/consensys/gnark/std/math/uints"
+	"github.com/arithmic/gnark/std/math/uints"
 )
 
 var rLeft = [80]uint{

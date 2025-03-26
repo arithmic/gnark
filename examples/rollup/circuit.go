@@ -5,11 +5,11 @@ package rollup
 
 import (
 	tedwards "github.com/consensys/gnark-crypto/ecc/twistededwards"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/accumulator/merkle"
-	"github.com/consensys/gnark/std/algebra/native/twistededwards"
-	"github.com/consensys/gnark/std/hash/mimc"
-	"github.com/consensys/gnark/std/signature/eddsa"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/accumulator/merkle"
+	"github.com/arithmic/gnark/std/algebra/native/twistededwards"
+	"github.com/arithmic/gnark/std/hash/mimc"
+	"github.com/arithmic/gnark/std/signature/eddsa"
 )
 
 const (

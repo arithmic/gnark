@@ -30,15 +30,15 @@ import (
 
 	"github.com/consensys/gnark-crypto/ecc/bn254/kzg"
 	fiatshamir "github.com/consensys/gnark-crypto/fiat-shamir"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/backend/witness"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/backend/witness"
 
-	"github.com/consensys/gnark/constraint"
-	cs "github.com/consensys/gnark/constraint/bn254"
-	"github.com/consensys/gnark/constraint/solver"
-	fcs "github.com/consensys/gnark/frontend/cs"
-	"github.com/consensys/gnark/internal/utils"
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/constraint"
+	cs "github.com/arithmic/gnark/constraint/bn254"
+	"github.com/arithmic/gnark/constraint/solver"
+	fcs "github.com/arithmic/gnark/frontend/cs"
+	"github.com/arithmic/gnark/internal/utils"
+	"github.com/arithmic/gnark/logger"
 )
 
 const (

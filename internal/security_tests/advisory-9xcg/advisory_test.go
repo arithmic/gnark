@@ -9,11 +9,11 @@ import (
 
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark-crypto/ecc/bn254"
-	"github.com/consensys/gnark/backend/groth16"
-	groth16_bn254 "github.com/consensys/gnark/backend/groth16/bn254"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/cs/r1cs"
-	"github.com/consensys/gnark/test"
+	"github.com/arithmic/gnark/backend/groth16"
+	groth16_bn254 "github.com/arithmic/gnark/backend/groth16/bn254"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/r1cs"
+	"github.com/arithmic/gnark/test"
 )
 
 type Circuit struct {

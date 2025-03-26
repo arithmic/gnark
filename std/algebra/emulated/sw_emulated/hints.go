@@ -18,10 +18,10 @@ import (
 	stark_curve "github.com/consensys/gnark-crypto/ecc/stark-curve"
 	stark_fp "github.com/consensys/gnark-crypto/ecc/stark-curve/fp"
 	"github.com/consensys/gnark-crypto/field/eisenstein"
-	"github.com/consensys/gnark/constraint/solver"
-	limbs "github.com/consensys/gnark/std/internal/limbcomposition"
-	"github.com/consensys/gnark/std/math/emulated"
-	"github.com/consensys/gnark/std/math/emulated/emparams"
+	"github.com/arithmic/gnark/constraint/solver"
+	limbs "github.com/arithmic/gnark/std/internal/limbcomposition"
+	"github.com/arithmic/gnark/std/math/emulated"
+	"github.com/arithmic/gnark/std/math/emulated/emparams"
 )
 
 func init() {

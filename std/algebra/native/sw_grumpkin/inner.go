@@ -7,7 +7,7 @@ import (
 
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark-crypto/ecc/grumpkin"
-	"github.com/consensys/gnark/frontend"
+	"github.com/arithmic/gnark/frontend"
 )
 
 var mappingOnce sync.Once

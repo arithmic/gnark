@@ -8,8 +8,8 @@ package cs
 import (
 	"encoding/binary"
 	"errors"
-	"github.com/consensys/gnark/constraint"
-	"github.com/consensys/gnark/internal/utils"
+	"github.com/arithmic/gnark/constraint"
+	"github.com/arithmic/gnark/internal/utils"
 	"math/big"
 
 	"github.com/consensys/gnark-crypto/ecc/bw6-633/fr"

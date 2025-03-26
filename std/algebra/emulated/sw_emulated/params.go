@@ -9,7 +9,7 @@ import (
 	bw6761 "github.com/consensys/gnark-crypto/ecc/bw6-761"
 	"github.com/consensys/gnark-crypto/ecc/secp256k1"
 	stark_curve "github.com/consensys/gnark-crypto/ecc/stark-curve"
-	"github.com/consensys/gnark/std/math/emulated"
+	"github.com/arithmic/gnark/std/math/emulated"
 )
 
 // CurveParams defines parameters of an elliptic curve in short Weierstrass form

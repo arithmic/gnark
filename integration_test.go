@@ -7,9 +7,9 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/internal/backend/circuits"
-	"github.com/consensys/gnark/test"
+	"github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/internal/backend/circuits"
+	"github.com/arithmic/gnark/test"
 )
 
 func TestIntegrationAPI(t *testing.T) {

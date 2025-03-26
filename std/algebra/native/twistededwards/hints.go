@@ -14,7 +14,7 @@ import (
 	babyjubjub "github.com/consensys/gnark-crypto/ecc/bn254/twistededwards"
 	edbw6633 "github.com/consensys/gnark-crypto/ecc/bw6-633/twistededwards"
 	edbw6761 "github.com/consensys/gnark-crypto/ecc/bw6-761/twistededwards"
-	"github.com/consensys/gnark/constraint/solver"
+	"github.com/arithmic/gnark/constraint/solver"
 )
 
 func GetHints() []solver.Hint {

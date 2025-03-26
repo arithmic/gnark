@@ -8,7 +8,7 @@ package plonk
 import (
 	"errors"
 	"fmt"
-	"github.com/consensys/gnark/backend/solidity"
+	"github.com/arithmic/gnark/backend/solidity"
 	"io"
 	"math/big"
 	"text/template"
@@ -24,8 +24,8 @@ import (
 
 	"github.com/consensys/gnark-crypto/ecc/bn254/kzg"
 	fiatshamir "github.com/consensys/gnark-crypto/fiat-shamir"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/logger"
 )
 
 var (

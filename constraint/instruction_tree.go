@@ -1,7 +1,7 @@
 package constraint
 
 import (
-	"github.com/consensys/gnark/debug"
+	"github.com/arithmic/gnark/debug"
 )
 
 type Level int

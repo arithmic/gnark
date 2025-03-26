@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/consensys/gnark/frontend"
-	limbs "github.com/consensys/gnark/std/internal/limbcomposition"
+	"github.com/arithmic/gnark/frontend"
+	limbs "github.com/arithmic/gnark/std/internal/limbcomposition"
 )
 
 // subPadding returns k*p for some k.

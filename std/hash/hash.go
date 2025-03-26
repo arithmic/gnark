@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/math/uints"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/math/uints"
 )
 
 // FieldHasher hashes inputs into a short digest. This interface mocks

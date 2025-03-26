@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/logger"
 	icicle_runtime "github.com/ingonyama-zk/icicle/v3/wrappers/golang/runtime"
 )
 

@@ -11,19 +11,19 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/consensys/gnark/internal/hints"
+	"github.com/arithmic/gnark/internal/hints"
 
-	"github.com/consensys/gnark/internal/utils"
+	"github.com/arithmic/gnark/internal/utils"
 
-	"github.com/consensys/gnark/debug"
-	"github.com/consensys/gnark/frontend/cs"
+	"github.com/arithmic/gnark/debug"
+	"github.com/arithmic/gnark/frontend/cs"
 
-	"github.com/consensys/gnark/constraint"
-	"github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/internal/expr"
-	"github.com/consensys/gnark/frontend/schema"
-	"github.com/consensys/gnark/std/math/bits"
+	"github.com/arithmic/gnark/constraint"
+	"github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/internal/expr"
+	"github.com/arithmic/gnark/frontend/schema"
+	"github.com/arithmic/gnark/std/math/bits"
 )
 
 // ---------------------------------------------------------------------------------------------

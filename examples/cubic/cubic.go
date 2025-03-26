@@ -4,7 +4,7 @@
 package cubic
 
 import (
-	"github.com/consensys/gnark/frontend"
+	"github.com/arithmic/gnark/frontend"
 )
 
 // Circuit defines a simple circuit

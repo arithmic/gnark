@@ -6,12 +6,12 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/internal/kvstore"
-	"github.com/consensys/gnark/internal/utils"
-	"github.com/consensys/gnark/logger"
-	limbs "github.com/consensys/gnark/std/internal/limbcomposition"
-	"github.com/consensys/gnark/std/rangecheck"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/internal/kvstore"
+	"github.com/arithmic/gnark/internal/utils"
+	"github.com/arithmic/gnark/logger"
+	limbs "github.com/arithmic/gnark/std/internal/limbcomposition"
+	"github.com/arithmic/gnark/std/rangecheck"
 	"github.com/rs/zerolog"
 	"golang.org/x/exp/constraints"
 )

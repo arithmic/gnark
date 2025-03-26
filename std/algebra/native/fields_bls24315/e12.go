@@ -5,7 +5,7 @@ package fields_bls24315
 
 import (
 	bls24315 "github.com/consensys/gnark-crypto/ecc/bls24-315"
-	"github.com/consensys/gnark/frontend"
+	"github.com/arithmic/gnark/frontend"
 )
 
 // E12 element in a quadratic extension

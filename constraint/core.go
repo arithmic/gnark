@@ -9,12 +9,12 @@ import (
 	"github.com/blang/semver/v4"
 	"github.com/consensys/gnark"
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/debug"
-	"github.com/consensys/gnark/internal/tinyfield"
-	"github.com/consensys/gnark/internal/utils"
-	"github.com/consensys/gnark/logger"
-	"github.com/consensys/gnark/profile"
+	"github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/debug"
+	"github.com/arithmic/gnark/internal/tinyfield"
+	"github.com/arithmic/gnark/internal/utils"
+	"github.com/arithmic/gnark/logger"
+	"github.com/arithmic/gnark/profile"
 )
 
 type SystemType uint16

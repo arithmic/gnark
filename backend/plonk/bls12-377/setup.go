@@ -11,9 +11,9 @@ import (
 	"github.com/consensys/gnark-crypto/ecc/bls12-377/fr/fft"
 	"github.com/consensys/gnark-crypto/ecc/bls12-377/fr/iop"
 	"github.com/consensys/gnark-crypto/ecc/bls12-377/kzg"
-	"github.com/consensys/gnark/backend/plonk/internal"
-	"github.com/consensys/gnark/constraint"
-	cs "github.com/consensys/gnark/constraint/bls12-377"
+	"github.com/arithmic/gnark/backend/plonk/internal"
+	"github.com/arithmic/gnark/constraint"
+	cs "github.com/arithmic/gnark/constraint/bls12-377"
 )
 
 // VerifyingKey stores the data needed to verify a proof:

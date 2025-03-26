@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/logger"
 )
 
 // Option allows changing the behaviour of the unsafe KZG SRS generation.

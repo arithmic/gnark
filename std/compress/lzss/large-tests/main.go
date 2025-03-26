@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/cs/scs"
-	"github.com/consensys/gnark/profile"
-	"github.com/consensys/gnark/std/compress/lzss"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/scs"
+	"github.com/arithmic/gnark/profile"
+	"github.com/arithmic/gnark/std/compress/lzss"
 )
 
 func main() {

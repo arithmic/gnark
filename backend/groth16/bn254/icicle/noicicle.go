@@ -3,10 +3,10 @@
 package icicle
 
 import (
-	"github.com/consensys/gnark/backend"
-	groth16_bn254 "github.com/consensys/gnark/backend/groth16/bn254"
-	"github.com/consensys/gnark/backend/witness"
-	cs "github.com/consensys/gnark/constraint/bn254"
+	"github.com/arithmic/gnark/backend"
+	groth16_bn254 "github.com/arithmic/gnark/backend/groth16/bn254"
+	"github.com/arithmic/gnark/backend/witness"
+	cs "github.com/arithmic/gnark/constraint/bn254"
 )
 
 const HasIcicle = false

@@ -10,7 +10,7 @@ import (
 
 	"github.com/consensys/gnark-crypto/ecc/bw6-761/fr/pedersen"
 	"github.com/consensys/gnark-crypto/utils/unsafe"
-	"github.com/consensys/gnark/internal/utils"
+	"github.com/arithmic/gnark/internal/utils"
 
 	"fmt"
 	"io"

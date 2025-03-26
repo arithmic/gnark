@@ -7,9 +7,9 @@ import (
 	"math/bits"
 	"slices"
 
-	"github.com/consensys/gnark/frontend"
-	limbs "github.com/consensys/gnark/std/internal/limbcomposition"
-	"github.com/consensys/gnark/std/multicommit"
+	"github.com/arithmic/gnark/frontend"
+	limbs "github.com/arithmic/gnark/std/internal/limbcomposition"
+	"github.com/arithmic/gnark/std/multicommit"
 )
 
 // deferredChecker is an interface for deferring a check in non-native

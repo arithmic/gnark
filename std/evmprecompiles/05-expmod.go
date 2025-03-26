@@ -3,8 +3,8 @@ package evmprecompiles
 import (
 	"fmt"
 
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/math/emulated"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/math/emulated"
 )
 
 // Expmod implements [MODEXP] precompile contract at address 0x05.

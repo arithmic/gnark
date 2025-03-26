@@ -8,11 +8,11 @@ import (
 	"github.com/consensys/gnark-crypto/ecc/bn254/fr"
 	"github.com/consensys/gnark-crypto/ecc/bn254/fr/fri"
 	"github.com/consensys/gnark-crypto/hash"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/cs/r1cs"
-	"github.com/consensys/gnark/std/accumulator/merkle"
-	"github.com/consensys/gnark/std/hash/mimc"
-	"github.com/consensys/gnark/test"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/r1cs"
+	"github.com/arithmic/gnark/std/accumulator/merkle"
+	"github.com/arithmic/gnark/std/hash/mimc"
+	"github.com/arithmic/gnark/test"
 )
 
 type ProofOfProximityTest struct {

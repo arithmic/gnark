@@ -6,8 +6,8 @@ package sw_bls24315
 import (
 	"errors"
 
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/algebra/native/fields_bls24315"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/algebra/native/fields_bls24315"
 )
 
 // GT target group of the pairing

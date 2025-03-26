@@ -4,8 +4,8 @@ package icicle
 
 import (
 	"github.com/consensys/gnark-crypto/ecc/bn254/fr"
-	groth16_bn254 "github.com/consensys/gnark/backend/groth16/bn254"
-	cs "github.com/consensys/gnark/constraint/bn254"
+	groth16_bn254 "github.com/arithmic/gnark/backend/groth16/bn254"
+	cs "github.com/arithmic/gnark/constraint/bn254"
 	icicle_core "github.com/ingonyama-zk/icicle/v3/wrappers/golang/core"
 )
 

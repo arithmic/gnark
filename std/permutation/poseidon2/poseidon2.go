@@ -13,8 +13,8 @@ import (
 	poseidonbn254 "github.com/consensys/gnark-crypto/ecc/bn254/fr/poseidon2"
 	poseidonbw6633 "github.com/consensys/gnark-crypto/ecc/bw6-633/fr/poseidon2"
 	poseidonbw6761 "github.com/consensys/gnark-crypto/ecc/bw6-761/fr/poseidon2"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/internal/utils"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/internal/utils"
 )
 
 var (

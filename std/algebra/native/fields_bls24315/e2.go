@@ -6,8 +6,8 @@ package fields_bls24315
 import (
 	bls24315 "github.com/consensys/gnark-crypto/ecc/bls24-315"
 	"github.com/consensys/gnark-crypto/ecc/bw6-633/fr"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/internal/utils"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/internal/utils"
 )
 
 // E2 element in a quadratic extension

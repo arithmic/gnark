@@ -11,14 +11,14 @@ import (
 	"testing"
 
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/backend/witness"
-	"github.com/consensys/gnark/constraint"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/cs/r1cs"
-	"github.com/consensys/gnark/frontend/cs/scs"
-	"github.com/consensys/gnark/frontend/schema"
-	gnarkio "github.com/consensys/gnark/io"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/backend/witness"
+	"github.com/arithmic/gnark/constraint"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/r1cs"
+	"github.com/arithmic/gnark/frontend/cs/scs"
+	"github.com/arithmic/gnark/frontend/schema"
+	gnarkio "github.com/arithmic/gnark/io"
 	"github.com/stretchr/testify/require"
 )
 

@@ -5,8 +5,8 @@ package sw_bls12377
 
 import (
 	bls12377 "github.com/consensys/gnark-crypto/ecc/bls12-377"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/algebra/native/fields_bls12377"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/algebra/native/fields_bls12377"
 )
 
 // lineEvaluation represents a sparse Fp12 Elmt (result of the line evaluation)

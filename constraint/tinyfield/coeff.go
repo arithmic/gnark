@@ -8,11 +8,11 @@ package cs
 import (
 	"encoding/binary"
 	"errors"
-	"github.com/consensys/gnark/constraint"
-	"github.com/consensys/gnark/internal/utils"
+	"github.com/arithmic/gnark/constraint"
+	"github.com/arithmic/gnark/internal/utils"
 	"math/big"
 
-	fr "github.com/consensys/gnark/internal/tinyfield"
+	fr "github.com/arithmic/gnark/internal/tinyfield"
 )
 
 // CoeffTable ensure we store unique coefficients in the constraint system

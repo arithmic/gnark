@@ -15,15 +15,15 @@ import (
 	"github.com/consensys/gnark-crypto/ecc/bn254/fr"
 	"github.com/consensys/gnark-crypto/ecc/bn254/fr/fft"
 	"github.com/consensys/gnark-crypto/ecc/bn254/fr/hash_to_field"
-	"github.com/consensys/gnark/backend"
-	groth16_bn254 "github.com/consensys/gnark/backend/groth16/bn254"
-	"github.com/consensys/gnark/backend/groth16/internal"
-	"github.com/consensys/gnark/backend/witness"
-	"github.com/consensys/gnark/constraint"
-	cs "github.com/consensys/gnark/constraint/bn254"
-	"github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/internal/utils"
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/backend"
+	groth16_bn254 "github.com/arithmic/gnark/backend/groth16/bn254"
+	"github.com/arithmic/gnark/backend/groth16/internal"
+	"github.com/arithmic/gnark/backend/witness"
+	"github.com/arithmic/gnark/constraint"
+	cs "github.com/arithmic/gnark/constraint/bn254"
+	"github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/internal/utils"
+	"github.com/arithmic/gnark/logger"
 
 	icicle_core "github.com/ingonyama-zk/icicle/v3/wrappers/golang/core"
 	icicle_bn254 "github.com/ingonyama-zk/icicle/v3/wrappers/golang/curves/bn254"
@@ -33,7 +33,7 @@ import (
 	icicle_vecops "github.com/ingonyama-zk/icicle/v3/wrappers/golang/curves/bn254/vecOps"
 	icicle_runtime "github.com/ingonyama-zk/icicle/v3/wrappers/golang/runtime"
 
-	fcs "github.com/consensys/gnark/frontend/cs"
+	fcs "github.com/arithmic/gnark/frontend/cs"
 )
 
 const HasIcicle = true

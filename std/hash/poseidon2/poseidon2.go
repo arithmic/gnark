@@ -3,9 +3,9 @@ package poseidon2
 import (
 	"fmt"
 
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/hash"
-	poseidon2 "github.com/consensys/gnark/std/permutation/poseidon2"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/hash"
+	poseidon2 "github.com/arithmic/gnark/std/permutation/poseidon2"
 )
 
 // NewMerkleDamgardHasher returns a Poseidon2 hasher using the Merkle-Damgard

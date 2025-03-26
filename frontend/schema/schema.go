@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/logger"
 )
 
 // Schema represents the structure of a gnark circuit (/ witness)

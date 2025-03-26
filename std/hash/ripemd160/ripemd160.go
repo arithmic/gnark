@@ -9,10 +9,10 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/hash"
-	"github.com/consensys/gnark/std/math/uints"
-	"github.com/consensys/gnark/std/permutation/ripemd160"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/hash"
+	"github.com/arithmic/gnark/std/math/uints"
+	"github.com/arithmic/gnark/std/permutation/ripemd160"
 )
 
 var _seed = uints.NewU32Array([]uint32{

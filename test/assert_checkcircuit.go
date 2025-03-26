@@ -2,16 +2,16 @@ package test
 
 import (
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/backend/groth16"
-	"github.com/consensys/gnark/backend/plonk"
-	"github.com/consensys/gnark/backend/solidity"
-	"github.com/consensys/gnark/backend/witness"
-	"github.com/consensys/gnark/constraint"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/schema"
-	"github.com/consensys/gnark/logger"
-	"github.com/consensys/gnark/test/unsafekzg"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/backend/groth16"
+	"github.com/arithmic/gnark/backend/plonk"
+	"github.com/arithmic/gnark/backend/solidity"
+	"github.com/arithmic/gnark/backend/witness"
+	"github.com/arithmic/gnark/constraint"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/schema"
+	"github.com/arithmic/gnark/logger"
+	"github.com/arithmic/gnark/test/unsafekzg"
 )
 
 // CheckCircuit performs a series of check on the provided circuit.

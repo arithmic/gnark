@@ -9,29 +9,29 @@ import (
 	"reflect"
 	"sort"
 
+	"github.com/arithmic/gnark/constraint"
+	"github.com/arithmic/gnark/debug"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/internal/expr"
+	"github.com/arithmic/gnark/frontend/schema"
+	"github.com/arithmic/gnark/internal/circuitdefer"
+	"github.com/arithmic/gnark/internal/frontendtype"
+	"github.com/arithmic/gnark/internal/kvstore"
+	"github.com/arithmic/gnark/internal/tinyfield"
+	"github.com/arithmic/gnark/internal/utils"
+	"github.com/arithmic/gnark/logger"
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/constraint"
-	"github.com/consensys/gnark/debug"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/internal/expr"
-	"github.com/consensys/gnark/frontend/schema"
-	"github.com/consensys/gnark/internal/circuitdefer"
-	"github.com/consensys/gnark/internal/frontendtype"
-	"github.com/consensys/gnark/internal/kvstore"
-	"github.com/consensys/gnark/internal/tinyfield"
-	"github.com/consensys/gnark/internal/utils"
-	"github.com/consensys/gnark/logger"
 
-	bls12377r1cs "github.com/consensys/gnark/constraint/bls12-377"
-	bls12381r1cs "github.com/consensys/gnark/constraint/bls12-381"
-	bls24315r1cs "github.com/consensys/gnark/constraint/bls24-315"
-	bls24317r1cs "github.com/consensys/gnark/constraint/bls24-317"
-	bn254r1cs "github.com/consensys/gnark/constraint/bn254"
-	bw6633r1cs "github.com/consensys/gnark/constraint/bw6-633"
-	bw6761r1cs "github.com/consensys/gnark/constraint/bw6-761"
-	grumpkinr1cs "github.com/consensys/gnark/constraint/grumpkin"
-	"github.com/consensys/gnark/constraint/solver"
-	tinyfieldr1cs "github.com/consensys/gnark/constraint/tinyfield"
+	bls12377r1cs "github.com/arithmic/gnark/constraint/bls12-377"
+	bls12381r1cs "github.com/arithmic/gnark/constraint/bls12-381"
+	bls24315r1cs "github.com/arithmic/gnark/constraint/bls24-315"
+	bls24317r1cs "github.com/arithmic/gnark/constraint/bls24-317"
+	bn254r1cs "github.com/arithmic/gnark/constraint/bn254"
+	bw6633r1cs "github.com/arithmic/gnark/constraint/bw6-633"
+	bw6761r1cs "github.com/arithmic/gnark/constraint/bw6-761"
+	grumpkinr1cs "github.com/arithmic/gnark/constraint/grumpkin"
+	"github.com/arithmic/gnark/constraint/solver"
+	tinyfieldr1cs "github.com/arithmic/gnark/constraint/tinyfield"
 )
 
 // NewBuilder returns a new R1CS builder which implements frontend.API.
@@ -81,7 +81,6 @@ func newBuilder(field *big.Int, config frontend.CompileConfig) *builder {
 	// by default the circuit is given a public wire equal to 1
 
 	curve := utils.FieldToCurve(field)
-
 	switch curve {
 	case ecc.BLS12_377:
 		builder.cs = bls12377r1cs.NewR1CS(config.Capacity)

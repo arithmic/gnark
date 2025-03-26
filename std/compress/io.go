@@ -2,10 +2,10 @@ package compress
 
 import (
 	"errors"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/compress/internal/plonk"
-	"github.com/consensys/gnark/std/hash/mimc"
-	"github.com/consensys/gnark/std/lookup/logderivlookup"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/compress/internal/plonk"
+	"github.com/arithmic/gnark/std/hash/mimc"
+	"github.com/arithmic/gnark/std/lookup/logderivlookup"
 	"hash"
 	"math/big"
 )

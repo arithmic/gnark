@@ -4,7 +4,7 @@ import (
 	"math/big"
 	"math/bits"
 
-	"github.com/consensys/gnark"
+	"github.com/arithmic/gnark"
 	"github.com/consensys/gnark-crypto/ecc"
 )
 

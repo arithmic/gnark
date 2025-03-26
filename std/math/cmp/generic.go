@@ -2,8 +2,8 @@
 package cmp
 
 import (
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/math/bits"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/math/bits"
 	"math/big"
 )
 

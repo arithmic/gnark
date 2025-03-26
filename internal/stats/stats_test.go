@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/consensys/gnark/backend"
+	"github.com/arithmic/gnark/backend"
 	"github.com/stretchr/testify/require"
 )
 

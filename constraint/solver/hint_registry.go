@@ -6,8 +6,8 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/consensys/gnark/internal/hints"
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/internal/hints"
+	"github.com/arithmic/gnark/logger"
 )
 
 func init() {

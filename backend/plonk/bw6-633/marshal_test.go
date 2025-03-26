@@ -9,7 +9,7 @@ import (
 	curve "github.com/consensys/gnark-crypto/ecc/bw6-633"
 
 	"github.com/consensys/gnark-crypto/ecc/bw6-633/fr"
-	"github.com/consensys/gnark/io"
+	"github.com/arithmic/gnark/io"
 	"math/big"
 	"math/rand"
 	"testing"

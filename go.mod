@@ -1,4 +1,4 @@
-module github.com/consensys/gnark
+module github.com/arithmic/gnark
 
 go 1.22
 
@@ -25,6 +25,7 @@ require (
 )
 
 require (
+	github.com/consensys/gnark v0.12.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect

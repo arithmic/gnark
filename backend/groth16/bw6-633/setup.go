@@ -12,9 +12,9 @@ import (
 	"github.com/consensys/gnark-crypto/ecc/bw6-633/fr"
 	"github.com/consensys/gnark-crypto/ecc/bw6-633/fr/fft"
 	"github.com/consensys/gnark-crypto/ecc/bw6-633/fr/pedersen"
-	"github.com/consensys/gnark/backend/groth16/internal"
-	"github.com/consensys/gnark/constraint"
-	cs "github.com/consensys/gnark/constraint/bw6-633"
+	"github.com/arithmic/gnark/backend/groth16/internal"
+	"github.com/arithmic/gnark/constraint"
+	cs "github.com/arithmic/gnark/constraint/bw6-633"
 	"math/big"
 	"math/bits"
 )

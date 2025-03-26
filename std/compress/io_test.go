@@ -10,12 +10,12 @@ import (
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark-crypto/ecc/bls12-377/fr"
 	"github.com/consensys/gnark-crypto/hash"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/cs/scs"
-	"github.com/consensys/gnark/profile"
-	test_vector_utils "github.com/consensys/gnark/std/internal/test_vectors_utils"
-	"github.com/consensys/gnark/test"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/scs"
+	"github.com/arithmic/gnark/profile"
+	test_vector_utils "github.com/arithmic/gnark/std/internal/test_vectors_utils"
+	"github.com/arithmic/gnark/test"
 	"github.com/stretchr/testify/assert"
 )
 

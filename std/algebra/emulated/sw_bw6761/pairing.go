@@ -6,10 +6,10 @@ import (
 	"math/big"
 
 	bw6761 "github.com/consensys/gnark-crypto/ecc/bw6-761"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/algebra/emulated/fields_bw6761"
-	"github.com/consensys/gnark/std/algebra/emulated/sw_emulated"
-	"github.com/consensys/gnark/std/math/emulated"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/algebra/emulated/fields_bw6761"
+	"github.com/arithmic/gnark/std/algebra/emulated/sw_emulated"
+	"github.com/arithmic/gnark/std/math/emulated"
 )
 
 type Pairing struct {

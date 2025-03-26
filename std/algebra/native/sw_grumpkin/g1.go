@@ -10,8 +10,8 @@ import (
 	"github.com/consensys/gnark-crypto/ecc"
 	fr_bn "github.com/consensys/gnark-crypto/ecc/bn254/fr"
 	"github.com/consensys/gnark-crypto/ecc/grumpkin"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/std/algebra/algopts"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/std/algebra/algopts"
 )
 
 // G1Affine point in affine coords

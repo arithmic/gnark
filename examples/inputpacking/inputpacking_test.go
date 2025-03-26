@@ -10,12 +10,12 @@ import (
 	cmimc "github.com/consensys/gnark-crypto/ecc/bn254/fr/mimc"
 
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/backend/groth16"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/cs/r1cs"
-	"github.com/consensys/gnark/std/hash/mimc"
-	"github.com/consensys/gnark/std/math/emulated"
-	"github.com/consensys/gnark/std/math/emulated/emparams"
+	"github.com/arithmic/gnark/backend/groth16"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/r1cs"
+	"github.com/arithmic/gnark/std/hash/mimc"
+	"github.com/arithmic/gnark/std/math/emulated"
+	"github.com/arithmic/gnark/std/math/emulated/emparams"
 )
 
 func inCircuitComputation(api frontend.API, input1, input2 frontend.Variable, expected frontend.Variable) {

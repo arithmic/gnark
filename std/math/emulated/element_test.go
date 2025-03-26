@@ -9,13 +9,13 @@ import (
 	"testing"
 
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/frontend/cs/r1cs"
-	"github.com/consensys/gnark/frontend/cs/scs"
-	limbs "github.com/consensys/gnark/std/internal/limbcomposition"
-	"github.com/consensys/gnark/std/math/emulated/emparams"
-	"github.com/consensys/gnark/test"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/r1cs"
+	"github.com/arithmic/gnark/frontend/cs/scs"
+	limbs "github.com/arithmic/gnark/std/internal/limbcomposition"
+	"github.com/arithmic/gnark/std/math/emulated/emparams"
+	"github.com/arithmic/gnark/test"
 )
 
 const testCurve = ecc.BN254

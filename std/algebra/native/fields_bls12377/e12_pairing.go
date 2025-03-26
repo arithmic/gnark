@@ -1,7 +1,7 @@
 package fields_bls12377
 
 import (
-	"github.com/consensys/gnark/frontend"
+	"github.com/arithmic/gnark/frontend"
 )
 
 // nSquareKarabina2345 repeated compressed cyclotmic square

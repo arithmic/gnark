@@ -9,8 +9,8 @@ import (
 	"regexp"
 	"sync"
 
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/internal/stats"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/internal/stats"
 )
 
 var (

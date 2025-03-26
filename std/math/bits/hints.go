@@ -3,7 +3,7 @@ package bits
 import (
 	"math/big"
 
-	"github.com/consensys/gnark/constraint/solver"
+	"github.com/arithmic/gnark/constraint/solver"
 )
 
 func GetHints() []solver.Hint {

@@ -3,8 +3,8 @@ package bitslice
 import (
 	"testing"
 
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/test"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/test"
 )
 
 // TODO: add option for choosing nbDigits

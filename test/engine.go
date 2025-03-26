@@ -14,21 +14,21 @@ import (
 	"sync/atomic"
 
 	"github.com/bits-and-blooms/bitset"
-	"github.com/consensys/gnark/constraint"
+	"github.com/arithmic/gnark/constraint"
 
-	"github.com/consensys/gnark/constraint/solver"
-	"github.com/consensys/gnark/debug"
-	"github.com/consensys/gnark/frontend/schema"
-	"github.com/consensys/gnark/logger"
+	"github.com/arithmic/gnark/constraint/solver"
+	"github.com/arithmic/gnark/debug"
+	"github.com/arithmic/gnark/frontend/schema"
+	"github.com/arithmic/gnark/logger"
 	"golang.org/x/crypto/sha3"
 
 	"github.com/consensys/gnark-crypto/ecc"
 	"github.com/consensys/gnark-crypto/field/pool"
-	"github.com/consensys/gnark/backend"
-	"github.com/consensys/gnark/frontend"
-	"github.com/consensys/gnark/internal/circuitdefer"
-	"github.com/consensys/gnark/internal/kvstore"
-	"github.com/consensys/gnark/internal/utils"
+	"github.com/arithmic/gnark/backend"
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/internal/circuitdefer"
+	"github.com/arithmic/gnark/internal/kvstore"
+	"github.com/arithmic/gnark/internal/utils"
 )
 
 // engine implements frontend.API
