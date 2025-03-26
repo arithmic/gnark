@@ -5,13 +5,14 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/consensys/gnark-crypto/ecc/grumpkin"
-	fr_grumpkin "github.com/consensys/gnark-crypto/ecc/grumpkin/fr"
 	"github.com/arithmic/gnark/frontend"
 	"github.com/arithmic/gnark/std/algebra/algopts"
 	"github.com/arithmic/gnark/std/math/emulated"
 	"github.com/arithmic/gnark/std/math/emulated/emparams"
 	"github.com/arithmic/gnark/std/selector"
+	fr_bn254 "github.com/consensys/gnark-crypto/ecc/bn254/fr"
+	"github.com/consensys/gnark-crypto/ecc/grumpkin"
+	fr_grumpkin "github.com/consensys/gnark-crypto/ecc/grumpkin/fr"
 )
 
 // Curve allows G1 operations in Grumpkin.
@@ -198,8 +199,8 @@ func (c *Curve) Mux(sel frontend.Variable, inputs ...*G1Affine) *G1Affine {
 // NewG1Affine allocates a witness from the native G1 element and returns it.
 func NewG1Affine(v grumpkin.G1Affine) G1Affine {
 	return G1Affine{
-		X: (fr_grumpkin.Element)(v.X),
-		Y: (fr_grumpkin.Element)(v.Y),
+		X: (fr_bn254.Element)(v.X),
+		Y: (fr_bn254.Element)(v.Y),
 	}
 }
 
