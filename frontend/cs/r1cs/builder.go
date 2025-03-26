@@ -29,6 +29,7 @@ import (
 	bn254r1cs "github.com/consensys/gnark/constraint/bn254"
 	bw6633r1cs "github.com/consensys/gnark/constraint/bw6-633"
 	bw6761r1cs "github.com/consensys/gnark/constraint/bw6-761"
+	grumpkinr1cs "github.com/consensys/gnark/constraint/grumpkin"
 	"github.com/consensys/gnark/constraint/solver"
 	tinyfieldr1cs "github.com/consensys/gnark/constraint/tinyfield"
 )
@@ -88,6 +89,8 @@ func newBuilder(field *big.Int, config frontend.CompileConfig) *builder {
 		builder.cs = bls12381r1cs.NewR1CS(config.Capacity)
 	case ecc.BN254:
 		builder.cs = bn254r1cs.NewR1CS(config.Capacity)
+	case ecc.GRUMPKIN:
+		builder.cs = grumpkinr1cs.NewR1CS(config.Capacity)
 	case ecc.BW6_761:
 		builder.cs = bw6761r1cs.NewR1CS(config.Capacity)
 	case ecc.BW6_633:

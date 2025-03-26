@@ -28,6 +28,7 @@ var Version = semver.MustParse("0.12.0")
 func Curves() []ecc.ID {
 	return []ecc.ID{
 		ecc.BN254,
+		ecc.GRUMPKIN,
 		ecc.BLS12_377,
 		ecc.BLS12_381,
 		ecc.BLS24_315,
