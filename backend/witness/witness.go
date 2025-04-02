@@ -47,6 +47,9 @@ import (
 	"math/big"
 	"reflect"
 
+	"github.com/arithmic/gnark/debug"
+	"github.com/arithmic/gnark/frontend/schema"
+	"github.com/arithmic/gnark/internal/tinyfield"
 	fr_bls12377 "github.com/consensys/gnark-crypto/ecc/bls12-377/fr"
 	fr_bls12381 "github.com/consensys/gnark-crypto/ecc/bls12-381/fr"
 	fr_bls24315 "github.com/consensys/gnark-crypto/ecc/bls24-315/fr"
@@ -54,9 +57,7 @@ import (
 	fr_bn254 "github.com/consensys/gnark-crypto/ecc/bn254/fr"
 	fr_bw6633 "github.com/consensys/gnark-crypto/ecc/bw6-633/fr"
 	fr_bw6761 "github.com/consensys/gnark-crypto/ecc/bw6-761/fr"
-	"github.com/arithmic/gnark/debug"
-	"github.com/arithmic/gnark/frontend/schema"
-	"github.com/arithmic/gnark/internal/tinyfield"
+	fr_grumpkin "github.com/consensys/gnark-crypto/ecc/grumpkin/fr"
 )
 
 var ErrInvalidWitness = errors.New("invalid witness")
@@ -175,6 +176,8 @@ func (w *witness) WriteTo(wr io.Writer) (n int64, err error) {
 	switch t := w.vector.(type) {
 	case fr_bn254.Vector:
 		m, err = t.WriteTo(wr)
+	case fr_grumpkin.Vector:
+		m, err = t.WriteTo(wr)
 	case fr_bls12377.Vector:
 		m, err = t.WriteTo(wr)
 	case fr_bls12381.Vector:
@@ -212,6 +215,9 @@ func (w *witness) ReadFrom(r io.Reader) (n int64, err error) {
 	var m int64
 	switch t := w.vector.(type) {
 	case fr_bn254.Vector:
+		m, err = t.ReadFrom(r)
+		w.vector = t
+	case fr_grumpkin.Vector:
 		m, err = t.ReadFrom(r)
 		w.vector = t
 	case fr_bls12377.Vector:

@@ -5,6 +5,8 @@ import (
 	"math/big"
 	"reflect"
 
+	"github.com/arithmic/gnark/internal/tinyfield"
+	"github.com/arithmic/gnark/internal/utils"
 	"github.com/consensys/gnark-crypto/ecc"
 	fr_bls12377 "github.com/consensys/gnark-crypto/ecc/bls12-377/fr"
 	fr_bls12381 "github.com/consensys/gnark-crypto/ecc/bls12-381/fr"
@@ -13,8 +15,7 @@ import (
 	fr_bn254 "github.com/consensys/gnark-crypto/ecc/bn254/fr"
 	fr_bw6633 "github.com/consensys/gnark-crypto/ecc/bw6-633/fr"
 	fr_bw6761 "github.com/consensys/gnark-crypto/ecc/bw6-761/fr"
-	"github.com/arithmic/gnark/internal/tinyfield"
-	"github.com/arithmic/gnark/internal/utils"
+	fr_grumpkin "github.com/consensys/gnark-crypto/ecc/grumpkin/fr"
 )
 
 func newVector(field *big.Int, size int) (any, error) {
@@ -22,6 +23,8 @@ func newVector(field *big.Int, size int) (any, error) {
 	switch curveID {
 	case ecc.BN254:
 		return make(fr_bn254.Vector, size), nil
+	case ecc.GRUMPKIN:
+		return make(fr_grumpkin.Vector, size), nil
 	case ecc.BLS12_377:
 		return make(fr_bls12377.Vector, size), nil
 	case ecc.BLS12_381:
@@ -47,6 +50,10 @@ func newFrom(from any, n int) (any, error) {
 	switch wt := from.(type) {
 	case fr_bn254.Vector:
 		a := make(fr_bn254.Vector, n)
+		copy(a, wt)
+		return a, nil
+	case fr_grumpkin.Vector:
+		a := make(fr_grumpkin.Vector, n)
 		copy(a, wt)
 		return a, nil
 	case fr_bls12377.Vector:
@@ -86,6 +93,8 @@ func leafType(v any) reflect.Type {
 	switch v.(type) {
 	case fr_bn254.Vector:
 		return reflect.TypeOf(fr_bn254.Element{})
+	case fr_grumpkin.Vector:
+		return reflect.TypeOf(fr_grumpkin.Element{})
 	case fr_bls12377.Vector:
 		return reflect.TypeOf(fr_bls12377.Element{})
 	case fr_bls12381.Vector:
@@ -108,6 +117,12 @@ func leafType(v any) reflect.Type {
 func set(v any, index int, value any) error {
 	switch pv := v.(type) {
 	case fr_bn254.Vector:
+		if index >= len(pv) {
+			return errors.New("out of bounds")
+		}
+		_, err := pv[index].SetInterface(value)
+		return err
+	case fr_grumpkin.Vector:
 		if index >= len(pv) {
 			return errors.New("out of bounds")
 		}
@@ -164,6 +179,13 @@ func iterate(v any) chan any {
 	chValues := make(chan any)
 	switch pv := v.(type) {
 	case fr_bn254.Vector:
+		go func() {
+			for i := 0; i < len(pv); i++ {
+				chValues <- &(pv)[i]
+			}
+			close(chValues)
+		}()
+	case fr_grumpkin.Vector:
 		go func() {
 			for i := 0; i < len(pv); i++ {
 				chValues <- &(pv)[i]
@@ -229,6 +251,8 @@ func resize(v any, n int) any {
 	switch v.(type) {
 	case fr_bn254.Vector:
 		return make(fr_bn254.Vector, n)
+	case fr_grumpkin.Vector:
+		return make(fr_grumpkin.Vector, n)
 	case fr_bls12377.Vector:
 		return make(fr_bls12377.Vector, n)
 	case fr_bls12381.Vector:

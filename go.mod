@@ -9,6 +9,7 @@ require (
 	github.com/blang/semver/v4 v4.0.0
 	github.com/consensys/bavard v0.1.29
 	github.com/consensys/compress v0.2.5
+	github.com/consensys/gnark v0.12.0
 	github.com/consensys/gnark-crypto v0.16.1-0.20250218155240-b2e7aa1a22d7
 	github.com/fxamacker/cbor/v2 v2.7.0
 	github.com/google/go-cmp v0.6.0
@@ -25,7 +26,6 @@ require (
 )
 
 require (
-	github.com/consensys/gnark v0.12.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
