@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"math/big"
 
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/internal/utils"
 	"github.com/consensys/gnark-crypto/ecc"
 	poseidonbls12377 "github.com/consensys/gnark-crypto/ecc/bls12-377/fr/poseidon2"
 	poseidonbls12381 "github.com/consensys/gnark-crypto/ecc/bls12-381/fr/poseidon2"
@@ -13,8 +15,7 @@ import (
 	poseidonbn254 "github.com/consensys/gnark-crypto/ecc/bn254/fr/poseidon2"
 	poseidonbw6633 "github.com/consensys/gnark-crypto/ecc/bw6-633/fr/poseidon2"
 	poseidonbw6761 "github.com/consensys/gnark-crypto/ecc/bw6-761/fr/poseidon2"
-	"github.com/arithmic/gnark/frontend"
-	"github.com/arithmic/gnark/internal/utils"
+	poseidongrumpkin "github.com/consensys/gnark-crypto/ecc/grumpkin/fr/poseidon2"
 )
 
 var (
@@ -67,6 +68,17 @@ func NewPoseidon2FromParameters(api frontend.API, width, nbFullRounds, nbPartial
 	case ecc.BN254:
 		params.degreeSBox = poseidonbn254.DegreeSBox()
 		concreteParams := poseidonbn254.NewParameters(width, nbFullRounds, nbPartialRounds)
+		params.roundKeys = make([][]big.Int, len(concreteParams.RoundKeys))
+		for i := range params.roundKeys {
+			params.roundKeys[i] = make([]big.Int, len(concreteParams.RoundKeys[i]))
+			for j := range params.roundKeys[i] {
+				concreteParams.RoundKeys[i][j].BigInt(&params.roundKeys[i][j])
+			}
+		}
+
+	case ecc.GRUMPKIN:
+		params.degreeSBox = poseidongrumpkin.DegreeSBox()
+		concreteParams := poseidongrumpkin.NewParameters(width, nbFullRounds, nbPartialRounds)
 		params.roundKeys = make([][]big.Int, len(concreteParams.RoundKeys))
 		for i := range params.roundKeys {
 			params.roundKeys[i] = make([]big.Int, len(concreteParams.RoundKeys[i]))

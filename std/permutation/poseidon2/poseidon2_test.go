@@ -3,6 +3,7 @@ package poseidon
 import (
 	"fmt"
 	"testing"
+	"time"
 
 	"github.com/consensys/gnark-crypto/ecc"
 	frbls24317 "github.com/consensys/gnark-crypto/ecc/bls24-317/fr"
@@ -23,10 +24,14 @@ import (
 	frbls12377 "github.com/consensys/gnark-crypto/ecc/bls12-377/fr"
 	poseidonbls12377 "github.com/consensys/gnark-crypto/ecc/bls12-377/fr/poseidon2"
 
+	"github.com/arithmic/gnark/frontend"
+	"github.com/arithmic/gnark/frontend/cs/r1cs"
+	"github.com/arithmic/gnark/test"
 	frbn254 "github.com/consensys/gnark-crypto/ecc/bn254/fr"
 	poseidonbn254 "github.com/consensys/gnark-crypto/ecc/bn254/fr/poseidon2"
-	"github.com/arithmic/gnark/frontend"
-	"github.com/arithmic/gnark/test"
+	frgrumpkin "github.com/consensys/gnark-crypto/ecc/grumpkin/fr"
+
+	poseidongrumpkin "github.com/consensys/gnark-crypto/ecc/grumpkin/fr/poseidon2"
 )
 
 type Poseidon2Circuit struct {
@@ -54,6 +59,54 @@ func (c *Poseidon2Circuit) Define(api frontend.API) error {
 	return nil
 }
 
+// To Compute the number of constraints in the Poseidon2Circuit for GRUMPKIN
+func TestPoseidon2CircuitConstraintsGRUMPKIN(t *testing.T) {
+	// Define the circuit
+	var circuit Poseidon2Circuit
+
+	// Set circuit parameters
+	params := circuitParams{rf: 8, rp: 56, t: 3, id: ecc.GRUMPKIN}
+	circuit.params = params
+	circuit.Input = make([]frontend.Variable, params.t)
+	circuit.Output = make([]frontend.Variable, params.t)
+
+	// // Compile the circuit into an R1CS
+	start := time.Now()
+	r1cs, err := frontend.Compile(ecc.GRUMPKIN.ScalarField(), r1cs.NewBuilder, &circuit)
+	if err != nil {
+		t.Fatalf("Error compiling circuit: %s", err)
+	}
+	duration := time.Since(start)
+
+	// Print the number of constraints
+	fmt.Printf("Circuit compiled in: %s\n", duration)
+	fmt.Printf("Number of constraints in Poseidon2Circuit: %d\n", r1cs.GetNbConstraints())
+}
+
+// To Compute the number of constraints in the Poseidon2Circuit for BN254
+func TestPoseidon2CircuitConstraintsBN254(t *testing.T) {
+	// Define the circuit
+	var circuit Poseidon2Circuit
+
+	// Set circuit parameters
+	params := circuitParams{rf: 8, rp: 56, t: 3, id: ecc.BN254}
+	circuit.params = params
+	circuit.Input = make([]frontend.Variable, params.t)
+	circuit.Output = make([]frontend.Variable, params.t)
+
+	// // Compile the circuit into an R1CS
+	start := time.Now()
+	r1cs, err := frontend.Compile(ecc.BN254.ScalarField(), r1cs.NewBuilder, &circuit)
+	if err != nil {
+		t.Fatalf("Error compiling circuit: %s", err)
+	}
+	duration := time.Since(start)
+
+	// Print the number of constraints
+	fmt.Printf("Circuit compiled in: %s\n", duration)
+	fmt.Printf("Number of constraints in Poseidon2Circuit: %d\n", r1cs.GetNbConstraints())
+}
+
 func TestPoseidon2(t *testing.T) {
 
 	assert := test.NewAssert(t)
@@ -66,6 +119,7 @@ func TestPoseidon2(t *testing.T) {
 	params[ecc.BW6_633] = circuitParams{rf: 8, rp: 56, t: 3, id: ecc.BW6_633}
 	params[ecc.BLS24_315] = circuitParams{rf: 8, rp: 56, t: 3, id: ecc.BLS24_315}
 	params[ecc.BLS24_317] = circuitParams{rf: 8, rp: 56, t: 3, id: ecc.BLS24_317}
+	params[ecc.GRUMPKIN] = circuitParams{rf: 8, rp: 56, t: 3, id: ecc.GRUMPKIN}
 
 	{
 		var circuit, validWitness Poseidon2Circuit
@@ -100,6 +154,41 @@ func TestPoseidon2(t *testing.T) {
 			test.WithValidAssignment(&validWitness),
 			test.WithCurves(ecc.BN254))
 	}
+
+	{
+		var circuit, validWitness Poseidon2Circuit
+
+		h := poseidongrumpkin.NewPermutation(
+			params[ecc.GRUMPKIN].t,
+			params[ecc.GRUMPKIN].rf,
+			params[ecc.GRUMPKIN].rp,
+		)
+		var in, out [3]frgrumpkin.Element
+		for i := 0; i < 3; i++ {
+			in[i].SetRandom()
+		}
+		copy(out[:], in[:])
+		err := h.Permutation(out[:])
+		if err != nil {
+			t.Fatal(err)
+		}
+
+		validWitness.Input = make([]frontend.Variable, 3)
+		validWitness.Output = make([]frontend.Variable, 3)
+
+		circuit.Input = make([]frontend.Variable, 3)
+		circuit.Output = make([]frontend.Variable, 3)
+		circuit.params = params[ecc.GRUMPKIN]
+
+		for i := 0; i < 3; i++ {
+			validWitness.Input[i] = in[i].String()
+			validWitness.Output[i] = out[i].String()
+		}
+		assert.CheckCircuit(&circuit,
+			test.WithValidAssignment(&validWitness),
+			test.WithCurves(ecc.GRUMPKIN))
+	}
+
 	{
 		var circuit, validWitness Poseidon2Circuit
 
